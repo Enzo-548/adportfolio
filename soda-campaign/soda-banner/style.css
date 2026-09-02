@@ -8,36 +8,104 @@ body {
     width: 728px;
     height: 90px;
     overflow: hidden;
-    background-color: #f0f0f0;
+    background: #071a36;
 }
 
-#banner {
+.creative {
     width: 728px;
     height: 90px;
     position: relative;
-    background: linear-gradient(135deg, #001f3f, #0074D9);
-    cursor: pointer;
     display: flex;
     align-items: center;
-    padding-left: 30px;
+    overflow: hidden;
+    color: #ffffff;
+    background: linear-gradient(105deg, #071a36 0%, #0d75c5 68%, #f7df78 68%);
+    cursor: pointer;
+    text-decoration: none;
+    isolation: isolate;
 }
 
-#lata {
+#banner-can {
     position: absolute;
-    left: 40px;
-    top: 10px;
-    opacity: 0;
+    left: 34px;
+    top: 6px;
+    transform-origin: center;
+    animation: can-arrive 0.9s 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
-#texto-container {
-    margin-left: 100px;
+.copy {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-left: 110px;
+    white-space: nowrap;
+}
+
+.pretitle,
+.message {
+    font: 700 13px/1 Georgia, serif;
+}
+
+.pretitle {
+    color: #f7df78;
 }
 
 h1 {
-    font-family: 'Bungee Shade', cursive;
-    font-size: 22px;
+    display: flex;
+    gap: 1px;
+    margin: 0;
     color: #ffffff;
+    font: 900 42px/0.8 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     text-transform: uppercase;
+}
+
+h1 span {
+    display: inline-block;
     opacity: 0;
-    line-height: 1.1;
+    transform: translateY(18px) scale(0.7);
+    animation: letter-pop 0.55s var(--delay) cubic-bezier(0.2, 1.5, 0.5, 1) forwards;
+}
+
+h1 span:nth-child(1) { --delay: 1s; }
+h1 span:nth-child(2) { --delay: 1.4s; }
+h1 span:nth-child(3) { --delay: 1.8s; }
+h1 span:nth-child(4) { --delay: 2.2s; }
+
+.message {
+    color: #ffffff;
+}
+
+.cta {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 10px 16px;
+    border-radius: 3px;
+    color: #071a36;
+    background: #f7df78;
+    box-shadow: 0 3px 0 #071a36;
+    font: 700 12px/1 Georgia, serif;
+    text-transform: uppercase;
+}
+
+.creative:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: -5px;
+}
+
+@keyframes can-arrive {
+    from { opacity: 0; transform: translateX(-12px) rotateY(180deg); }
+    to { opacity: 1; transform: translateX(0) rotateY(540deg); }
+}
+
+@keyframes letter-pop {
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #banner-can,
+    h1 span {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }

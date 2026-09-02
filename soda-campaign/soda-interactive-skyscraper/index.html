@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soda Cola - Skyscraper Interativo 160x600</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a id="interactive-skyscraper" class="creative" href="https://exemplo.com/soda-cola" target="_blank" rel="noopener" aria-label="Interaja com a Soda Cola">
+        <canvas id="burst" width="160" height="600" aria-hidden="true"></canvas>
+        <div class="can-stage" aria-hidden="true">
+            <img src="assets/lata.svg" alt="" id="interactive-can" width="72" height="126">
+        </div>
+        <div class="idle-copy">
+            <p>Toque para abrir</p>
+            <span class="tap-dot"></span>
+        </div>
+        <div class="reveal-copy" aria-live="polite">
+            <p class="burst-label">Uma explosão de sabor</p>
+            <h1>SODA</h1>
+            <span class="cta">Garanta a sua</span>
+        </div>
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>

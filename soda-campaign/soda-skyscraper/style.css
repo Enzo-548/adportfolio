@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 160px;
+    height: 600px;
+    overflow: hidden;
+    background: #071a36;
+}
+
+.creative {
+    width: 160px;
+    height: 600px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    color: #ffffff;
+    background: linear-gradient(160deg, #072a58 0%, #0d75c5 56%, #f2c94c 56%, #f7df78 100%);
+    cursor: pointer;
+    text-decoration: none;
+    isolation: isolate;
+}
+
+.creative::before,
+.creative::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.creative::before {
+    width: 190px;
+    height: 190px;
+    top: 78px;
+    left: -78px;
+}
+
+.creative::after {
+    width: 150px;
+    height: 150px;
+    right: -86px;
+    bottom: 86px;
+}
+
+.can-stage {
+    position: absolute;
+    top: 102px;
+    left: 40px;
+    width: 80px;
+    height: 140px;
+    perspective: 500px;
+    opacity: 0;
+    animation: can-enter 0.5s ease-out forwards;
+}
+
+#vertical-can {
+    display: block;
+    width: 80px;
+    height: 140px;
+    transform-origin: center;
+    animation: can-spin 1.5s 0.5s ease-in-out both, can-pulse 2.2s 2.5s ease-in-out infinite;
+}
+
+.copy {
+    position: absolute;
+    top: 270px;
+    width: 100%;
+    text-align: center;
+}
+
+.eyebrow,
+.tagline {
+    font: 700 10px/1.2 Georgia, serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    color: #f7df78;
+}
+
+h1 {
+    margin: 7px 0 2px;
+    color: #ffffff;
+    font: 900 48px/0.9 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(18px);
+    animation: copy-reveal 1s 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.tagline {
+    color: #071a36;
+    opacity: 0;
+    animation: copy-reveal 0.7s 1.9s ease-out forwards;
+}
+
+.cta {
+    position: absolute;
+    right: 16px;
+    bottom: 24px;
+    left: 16px;
+    padding: 12px 4px;
+    border: 2px solid #071a36;
+    border-radius: 4px;
+    color: #071a36;
+    background: #f7df78;
+    box-shadow: 0 4px 0 #071a36;
+    font: 700 12px/1 Georgia, serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.creative:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: -5px;
+}
+
+@keyframes can-enter {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes can-spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+@keyframes can-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+
+@keyframes copy-reveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .can-stage,
+    #vertical-can,
+    h1,
+    .tagline {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
