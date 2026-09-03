@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="70" viewBox="0 0 40 70">
+  <!-- Corpo metálico de fundo com cantos arredondados -->
+  <rect x="0" y="0" width="40" height="70" rx="6" fill="#002266"/>
+  <!-- Gradiente sutil simulando o cilindro de alumínio nas laterais -->
+  <linearGradient id="metalBase" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#001133" stop-opacity="1"/>
+    <stop offset="30%" stop-color="#002266" stop-opacity="0"/>
+    <stop offset="70%" stop-color="#002266" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#001133" stop-opacity="1"/>
+  </linearGradient>
+  <rect x="0" y="0" width="40" height="70" rx="6" fill="url(#metalBase)"/>
+</svg>

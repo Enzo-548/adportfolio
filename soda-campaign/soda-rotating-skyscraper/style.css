@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 160px;
+    height: 600px;
+    overflow: hidden;
+    background: #061631;
+}
+
+.creative {
+    position: relative;
+    display: block;
+    width: 160px;
+    height: 600px;
+    overflow: hidden;
+    isolation: isolate;
+    color: #fff;
+    background: linear-gradient(160deg, #061631 0%, #0b3f78 51%, #087cba 100%);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.creative::before {
+    position: absolute;
+    right: -44px;
+    bottom: 38px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    box-shadow: 0 0 0 18px rgba(255, 255, 255, 0.05), 0 0 0 36px rgba(255, 255, 255, 0.04);
+    content: "";
+}
+
+.creative::after {
+    position: absolute;
+    right: -25px;
+    bottom: 0;
+    left: -25px;
+    height: 150px;
+    z-index: -1;
+    background: #f7d34d;
+    clip-path: polygon(0 48%, 100% 0, 100% 100%, 0 100%);
+    content: "";
+}
+
+.burst {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f7d34d;
+    box-shadow: 15px 15px 0 rgba(247, 211, 77, 0.75), 30px -5px 0 rgba(247, 211, 77, 0.5);
+    opacity: 0;
+    animation: rise-in 0.7s 0.3s ease-out forwards;
+}
+
+.burst-top {
+    position: absolute;
+    top: 103px;
+    left: 24px;
+}
+
+.burst-bottom {
+    position: absolute;
+    right: 25px;
+    bottom: 179px;
+    transform: scale(0.65);
+    animation-delay: 0.8s;
+}
+
+.intro {
+    position: absolute;
+    top: 35px;
+    right: 18px;
+    left: 18px;
+    z-index: 2;
+}
+
+.eyebrow,
+.tagline,
+.legal {
+    font-family: Georgia, serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    color: #f7d34d;
+    opacity: 0;
+    animation: copy-in 0.7s 0.2s ease-out forwards;
+}
+
+h1 {
+    margin-top: 5px;
+    color: #fff;
+    font: 900 50px/0.82 Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(14px);
+    animation: copy-in 0.8s 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.can-stage {
+    position: absolute;
+    top: 154px;
+    left: 40px;
+    width: 80px;
+    height: 140px;
+    perspective: 420px;
+    will-change: transform;
+    transform: translate3d(0, 16px, 0);
+    opacity: 0;
+    animation: stage-in 0.8s 0.35s ease-out forwards;
+}
+
+.can-shadow {
+    position: absolute;
+    right: 3px;
+    bottom: -13px;
+    left: 3px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(1, 11, 31, 0.45);
+    filter: blur(4px);
+}
+
+.can-layers {
+    position: relative;
+    width: 80px;
+    height: 140px;
+    will-change: transform;
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+    animation: can-float 2.8s 1.8s ease-in-out infinite;
+}
+
+.can-layer {
+    position: absolute;
+    display: block;
+    left: 0;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
+.can-base,
+.can-label,
+.can-shine {
+    top: 0;
+    width: 80px;
+    height: 140px;
+}
+
+.can-label {
+    transform-origin: center;
+    animation: label-turn 2.8s 1.2s ease-in-out infinite;
+}
+
+.can-lid {
+    top: -3px;
+    left: 0;
+    width: 80px;
+    height: 30px;
+    transform-origin: center;
+    animation: lid-turn 2.8s 1.2s ease-in-out infinite;
+}
+
+.can-shine {
+    animation: shine-sweep 2.8s 1.2s ease-in-out infinite;
+}
+
+.message {
+    position: absolute;
+    top: 329px;
+    right: 18px;
+    left: 18px;
+    text-align: center;
+}
+
+.tagline {
+    color: #061631;
+    font-size: 11px;
+    line-height: 1.35;
+    opacity: 0;
+    animation: copy-in 0.7s 1.9s ease-out forwards;
+}
+
+.cta {
+    display: block;
+    margin-top: 19px;
+    padding: 12px 4px 11px;
+    border: 2px solid #061631;
+    border-radius: 3px;
+    color: #061631;
+    background: #f7d34d;
+    box-shadow: 0 4px 0 #061631;
+    font: 700 11px/1 Georgia, serif;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: copy-in 0.7s 2.2s ease-out forwards;
+}
+
+.cta span {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 15px;
+    vertical-align: -1px;
+}
+
+.legal {
+    position: absolute;
+    bottom: 20px;
+    left: 18px;
+    color: #061631;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.creative:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: -6px;
+}
+
+.creative:hover .cta {
+    background: #fff;
+}
+
+@keyframes stage-in {
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes label-turn {
+    0%, 100% { transform: translate3d(0, 0, 0) scaleX(1); }
+    22% { transform: translate3d(4px, 0, 0) scaleX(0.86); }
+    48% { transform: translate3d(-3px, 0, 0) scaleX(0.94); }
+    72% { transform: translate3d(-4px, 0, 0) scaleX(0.84); }
+}
+
+@keyframes lid-turn {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg) scaleX(1); }
+    24% { transform: translate3d(-4px, 1px, 0) rotate(-3deg) scaleX(0.9); }
+    70% { transform: translate3d(4px, 1px, 0) rotate(3deg) scaleX(0.88); }
+}
+
+@keyframes shine-sweep {
+    0%, 15% { transform: translate3d(-18px, 0, 0); opacity: 0; }
+    35%, 62% { transform: translate3d(0, 0, 0); opacity: 1; }
+    82%, 100% { transform: translate3d(18px, 0, 0); opacity: 0; }
+}
+
+@keyframes can-float {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
+    50% { transform: translate3d(0, -5px, 0) rotate(2deg); }
+}
+
+@keyframes copy-in {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rise-in {
+    to { opacity: 1; transform: translateY(-5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+
+    .eyebrow, h1, .can-stage, .tagline, .cta, .burst {
+        opacity: 1;
+        transform: none;
+    }
+}
