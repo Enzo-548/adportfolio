@@ -1,6 +1,6 @@
 # adportfolio
 
-This repository is dedicated to showing off html5 ads that ive built.
+This repository is dedicated to featuring the html5 ads that ive built.
 
 ## How to Download, Setup, and Run the Project Locally
 
