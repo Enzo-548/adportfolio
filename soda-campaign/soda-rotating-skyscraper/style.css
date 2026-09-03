@@ -149,11 +149,18 @@ h1 {
 }
 
 .can-base,
-.can-label,
-.can-shine {
+.can-label{
     top: 0;
-    width: 80px;
+    width: 65px;
     height: 140px;
+}
+
+.can-shine {
+    left: 13px;
+    top: 15px;
+    width: 65px;
+    height: 127px;
+    z-index: 2;
 }
 
 .can-label {
@@ -162,12 +169,13 @@ h1 {
 }
 
 .can-lid {
-    top: -3px;
-    left: 0;
-    width: 80px;
+    top: 5px;
+    left: -5px;
+    width: 75px;
     height: 30px;
     transform-origin: center;
     animation: lid-turn 2.8s 1.2s ease-in-out infinite;
+    z-index: 3;
 }
 
 .can-shine {
@@ -244,8 +252,6 @@ h1 {
 
 @keyframes lid-turn {
     0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg) scaleX(1); }
-    24% { transform: translate3d(-4px, 1px, 0) rotate(-3deg) scaleX(0.9); }
-    70% { transform: translate3d(4px, 1px, 0) rotate(3deg) scaleX(0.88); }
 }
 
 @keyframes shine-sweep {

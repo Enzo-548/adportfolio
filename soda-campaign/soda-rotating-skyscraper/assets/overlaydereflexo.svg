@@ -7,5 +7,5 @@
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect x="0" y="0" width="40" height="70" rx="6" fill="url(#overlayReflexo)" style="mix-blend-mode: overlay;"/>
+  <rect x="0" y="0" width="20" height="65" rx="6" fill="url(#overlayReflexo)" style="mix-blend-mode: overlay;"/>
 </svg>
