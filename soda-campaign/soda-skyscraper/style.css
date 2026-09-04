@@ -82,6 +82,7 @@ body {
 
 .eyebrow {
     color: #f7df78;
+    rotate:-20deg;
 }
 
 h1 {
@@ -92,12 +93,16 @@ h1 {
     opacity: 0;
     transform: translateY(18px);
     animation: copy-reveal 1s 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    rotate: -20deg;
 }
 
 .tagline {
     color: #071a36;
     opacity: 0;
     animation: copy-reveal 0.7s 1.9s ease-out forwards;
+    rotate:-20deg;
+    margin-top: 15px;
+    margin-left:12px;
 }
 
 .cta {

@@ -94,7 +94,7 @@ h1 span:nth-child(4) { --delay: 2.2s; }
 
 @keyframes can-arrive {
     from { opacity: 0; transform: translateX(-12px) rotateY(180deg); }
-    to { opacity: 1; transform: translateX(0) rotateY(540deg); }
+    to { opacity: 1; transform: translateX(0) rotateY(720deg); }
 }
 
 @keyframes letter-pop {
