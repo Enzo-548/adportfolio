@@ -179,7 +179,7 @@ h1 {
 }
 
 .can-shine {
-    animation: shine-sweep 2.8s 1.2s ease-in-out infinite;
+    animation: shine-sweep 3.2s 1.6s ease-in-out infinite;
 }
 
 .message {
@@ -243,22 +243,14 @@ h1 {
     to { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
-@keyframes label-turn {
-    0%, 100% { transform: translate3d(0, 0, 0) scaleX(1); }
-    22% { transform: translate3d(4px, 0, 0) scaleX(0.86); }
-    48% { transform: translate3d(-3px, 0, 0) scaleX(0.94); }
-    72% { transform: translate3d(-4px, 0, 0) scaleX(0.84); }
-}
 
 @keyframes lid-turn {
-    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg) scaleX(1); }
+    0%, 100% { transform: translateX(0px) scaleX(1); }
+    25% { transform: translateX(0) scaleX(1); }
+    50% { transform: translateX(0px) scaleX(1); }
+    75% { transform: translateX(0) scaleX(1); }
 }
 
-@keyframes shine-sweep {
-    0%, 15% { transform: translate3d(-18px, 0, 0); opacity: 0; }
-    35%, 62% { transform: translate3d(0, 0, 0); opacity: 1; }
-    82%, 100% { transform: translate3d(18px, 0, 0); opacity: 0; }
-}
 
 @keyframes can-float {
     0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
