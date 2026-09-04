@@ -19,7 +19,7 @@ body {
     align-items: center;
     overflow: hidden;
     color: #ffffff;
-    background: linear-gradient(105deg, #071a36 0%, #0d75c5 68%, #f7df78 68%);
+    background: linear-gradient(105deg, #071a36 0%, #0d75c5 68%, rgb(247, 223, 120) 68%);
     cursor: pointer;
     text-decoration: none;
     isolation: isolate;
